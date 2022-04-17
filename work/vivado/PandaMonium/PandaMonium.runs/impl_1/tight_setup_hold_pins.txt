@@ -1,0 +1,7 @@
++==============+===============+===============================================+
+| Launch Clock | Capture Clock | Pin                                           |
++==============+===============+===============================================+
+| clk_0        | clk_0         | control_unit/FSM_sequential_M_ctrl_q_reg[2]/D |
+| clk_0        | clk_0         | control_unit/FSM_sequential_M_ctrl_q_reg[0]/D |
+| clk_0        | clk_0         | control_unit/FSM_sequential_M_ctrl_q_reg[5]/D |
++--------------+---------------+-----------------------------------------------+

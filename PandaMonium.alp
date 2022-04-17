@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PandaMonium" board="Alchitry Au" language="Lucid" version="3">
+  <files>
+    <src>compare.luc</src>
+    <component>pipeline.luc</component>
+    <src top="true">au_top.luc</src>
+    <component>counter.luc</component>
+    <src>wdselmux.luc</src>
+    <src>adder2.luc</src>
+    <src>led_output.luc</src>
+    <src>bselmux.luc</src>
+    <component>reset_conditioner.luc</component>
+    <src>orientation_unit.luc</src>
+    <src>maps.luc</src>
+    <component>encoder.luc</component>
+    <component>button_conditioner.luc</component>
+    <src>alu.luc</src>
+    <src>ledstrip.luc</src>
+    <src>sixteen_bit_2s_complement.luc</src>
+    <src>regfile.luc</src>
+    <src>bool2.luc</src>
+    <component>decoder.luc</component>
+    <src>multiply.luc</src>
+    <src>multi_seven_seg.luc</src>
+    <src>aselmux.luc</src>
+    <src>rom.luc</src>
+    <src>divide2.luc</src>
+    <src>shifter.luc</src>
+    <component>edge_detector.luc</component>
+    <src>seven_seg.luc</src>
+    <src>control_unit.luc</src>
+    <constraint>alchitry.acf</constraint>
+    <constraint>au.xdc</constraint>
+  </files>
+</project>

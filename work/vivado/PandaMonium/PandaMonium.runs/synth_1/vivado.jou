@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Apr 18 00:45:14 2022
+# Process ID: 11604
+# Current directory: C:/Users/jarro/Documents/alchitry/PandaMonium/work/vivado/PandaMonium/PandaMonium.runs/synth_1
+# Command line: vivado.exe -log au_top_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source au_top_0.tcl
+# Log file: C:/Users/jarro/Documents/alchitry/PandaMonium/work/vivado/PandaMonium/PandaMonium.runs/synth_1/au_top_0.vds
+# Journal file: C:/Users/jarro/Documents/alchitry/PandaMonium/work/vivado/PandaMonium/PandaMonium.runs/synth_1\vivado.jou
+# Running On: LAPTOP-RBG8SKGL, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16969 MB
+#-----------------------------------------------------------
+source au_top_0.tcl -notrace
