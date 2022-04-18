@@ -210,7 +210,7 @@ module control_unit_12 (
             end
           endcase
         end else begin
-          if (start == 1'h0) begin
+          if (reset == 1'h1) begin
             M_ctrl_d = GAMEOVER_ctrl;
           end else begin
             M_ctrl_d = IDLE_ctrl;

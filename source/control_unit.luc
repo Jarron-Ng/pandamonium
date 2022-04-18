@@ -172,7 +172,7 @@ module control_unit (
           }
           
         }
-        else if (start == 0){
+        else if (reset == 1){
           ctrl.d = ctrl.GAMEOVER;
         }
         else{ctrl.d = ctrl.IDLE;}

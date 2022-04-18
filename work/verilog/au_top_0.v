@@ -19,6 +19,7 @@ module au_top_0 (
     input downButton,
     input leftButton,
     input resetButton,
+    input toggleSW,
     output reg [23:0] io_led,
     output reg br_led0,
     output reg br_led1,
@@ -390,8 +391,8 @@ module au_top_0 (
     M_buttondetector_in = M_buttoncond_out;
     M_orientation_unit_button = M_buttondetector_out[0+3-:4];
     M_control_unit_reset = M_buttondetector_out[4+0-:1];
-    M_control_unit_start = io_dip[0+0+0-:1];
-    M_led_out_game_start = io_dip[0+0+0-:1];
+    M_control_unit_start = toggleSW;
+    M_led_out_game_start = toggleSW;
     M_orientation_unit_orientation_state = M_regfile_orientation_out[0+1-:2];
     M_control_unit_direction = M_orientation_unit_direction;
     M_control_unit_y_temp = M_regfile_y_temp;

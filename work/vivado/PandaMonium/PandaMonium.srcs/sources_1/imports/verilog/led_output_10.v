@@ -30,15 +30,15 @@ module led_output_10 (
   
   localparam WALL = 24'h00ff00;
   
-  localparam WHITE = 24'hffffff;
-  
   localparam YELLOW = 24'h00ffff;
   
   localparam PINK = 24'h80ff00;
   
-  localparam GRAY = 24'hd8d8d8;
+  localparam RED = 24'h00ff00;
   
-  localparam ORANGE = 24'h80ff00;
+  localparam BLUE = 24'hff0000;
+  
+  localparam BLACK = 24'h000000;
   
   always @* begin
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -58,9 +58,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row0[0+23-:24] = 24'h00ffff;
+        row0[0+23-:24] = 24'h000000;
       end else begin
-        row0[0+23-:24] = 24'hffffff;
+        row0[0+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -75,9 +75,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row0[24+23-:24] = 24'h00ffff;
+        row0[24+23-:24] = 24'h000000;
       end else begin
-        row0[24+23-:24] = 24'h00ffff;
+        row0[24+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -92,9 +92,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row0[48+23-:24] = 24'h00ffff;
+        row0[48+23-:24] = 24'h00ff00;
       end else begin
-        row0[48+23-:24] = 24'h00ffff;
+        row0[48+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -109,9 +109,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row0[72+23-:24] = 24'h00ffff;
+        row0[72+23-:24] = 24'h00ff00;
       end else begin
-        row0[72+23-:24] = 24'hd8d8d8;
+        row0[72+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -126,9 +126,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row0[96+23-:24] = 24'h00ff00;
+        row0[96+23-:24] = 24'h000000;
       end else begin
-        row0[96+23-:24] = 24'hffffff;
+        row0[96+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -143,9 +143,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row0[120+23-:24] = 24'h00ff00;
+        row0[120+23-:24] = 24'h000000;
       end else begin
-        row0[120+23-:24] = 24'h00ffff;
+        row0[120+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -160,9 +160,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row0[144+23-:24] = 24'h00ffff;
+        row0[144+23-:24] = 24'h000000;
       end else begin
-        row0[144+23-:24] = 24'h00ffff;
+        row0[144+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -177,9 +177,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row0[168+23-:24] = 24'h00ffff;
+        row0[168+23-:24] = 24'h000000;
       end else begin
-        row0[168+23-:24] = 24'h00ffff;
+        row0[168+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -194,9 +194,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row1[0+23-:24] = 24'h00ffff;
+        row1[0+23-:24] = 24'h000000;
       end else begin
-        row1[0+23-:24] = 24'hd8d8d8;
+        row1[0+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -211,9 +211,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row1[24+23-:24] = 24'h00ffff;
+        row1[24+23-:24] = 24'h00ff00;
       end else begin
-        row1[24+23-:24] = 24'h00ffff;
+        row1[24+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -228,9 +228,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row1[48+23-:24] = 24'h00ffff;
+        row1[48+23-:24] = 24'h00ff00;
       end else begin
-        row1[48+23-:24] = 24'h00ffff;
+        row1[48+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -247,7 +247,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row1[72+23-:24] = 24'h00ff00;
       end else begin
-        row1[72+23-:24] = 24'h00ffff;
+        row1[72+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -264,7 +264,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row1[96+23-:24] = 24'h00ff00;
       end else begin
-        row1[96+23-:24] = 24'hd8d8d8;
+        row1[96+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -279,9 +279,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row1[120+23-:24] = 24'h00ff00;
+        row1[120+23-:24] = 24'h000000;
       end else begin
-        row1[120+23-:24] = 24'h00ffff;
+        row1[120+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -296,9 +296,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row1[144+23-:24] = 24'h00ff00;
+        row1[144+23-:24] = 24'h000000;
       end else begin
-        row1[144+23-:24] = 24'h80ff00;
+        row1[144+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -313,9 +313,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row1[168+23-:24] = 24'h00ffff;
+        row1[168+23-:24] = 24'h000000;
       end else begin
-        row1[168+23-:24] = 24'h00ffff;
+        row1[168+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -330,9 +330,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row2[0+23-:24] = 24'h00ffff;
+        row2[0+23-:24] = 24'h000000;
       end else begin
-        row2[0+23-:24] = 24'hd8d8d8;
+        row2[0+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -347,9 +347,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row2[24+23-:24] = 24'h00ffff;
+        row2[24+23-:24] = 24'h00ff00;
       end else begin
-        row2[24+23-:24] = 24'h00ffff;
+        row2[24+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -366,7 +366,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row2[48+23-:24] = 24'h00ff00;
       end else begin
-        row2[48+23-:24] = 24'hffffff;
+        row2[48+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -383,7 +383,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row2[72+23-:24] = 24'h00ff00;
       end else begin
-        row2[72+23-:24] = 24'h00ffff;
+        row2[72+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -400,7 +400,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row2[96+23-:24] = 24'h00ff00;
       end else begin
-        row2[96+23-:24] = 24'hd8d8d8;
+        row2[96+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -417,7 +417,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row2[120+23-:24] = 24'h00ff00;
       end else begin
-        row2[120+23-:24] = 24'h00ffff;
+        row2[120+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -432,9 +432,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row2[144+23-:24] = 24'h00ff00;
+        row2[144+23-:24] = 24'h000000;
       end else begin
-        row2[144+23-:24] = 24'h00ffff;
+        row2[144+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -449,9 +449,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row2[168+23-:24] = 24'h00ffff;
+        row2[168+23-:24] = 24'h000000;
       end else begin
-        row2[168+23-:24] = 24'h00ffff;
+        row2[168+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -466,9 +466,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row3[0+23-:24] = 24'h00ffff;
+        row3[0+23-:24] = 24'h000000;
       end else begin
-        row3[0+23-:24] = 24'h80ff00;
+        row3[0+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -483,9 +483,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row3[24+23-:24] = 24'h00ff00;
+        row3[24+23-:24] = 24'h000000;
       end else begin
-        row3[24+23-:24] = 24'hd8d8d8;
+        row3[24+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -502,7 +502,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row3[48+23-:24] = 24'h00ff00;
       end else begin
-        row3[48+23-:24] = 24'hd8d8d8;
+        row3[48+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -519,7 +519,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row3[72+23-:24] = 24'h00ff00;
       end else begin
-        row3[72+23-:24] = 24'hd8d8d8;
+        row3[72+23-:24] = 24'h80ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -536,7 +536,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row3[96+23-:24] = 24'h00ff00;
       end else begin
-        row3[96+23-:24] = 24'hd8d8d8;
+        row3[96+23-:24] = 24'h80ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -553,7 +553,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row3[120+23-:24] = 24'h00ff00;
       end else begin
-        row3[120+23-:24] = 24'hd8d8d8;
+        row3[120+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -568,9 +568,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row3[144+23-:24] = 24'h00ffff;
+        row3[144+23-:24] = 24'h00ff00;
       end else begin
-        row3[144+23-:24] = 24'hffffff;
+        row3[144+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -585,9 +585,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row3[168+23-:24] = 24'h00ffff;
+        row3[168+23-:24] = 24'h000000;
       end else begin
-        row3[168+23-:24] = 24'hffffff;
+        row3[168+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -602,9 +602,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row4[0+23-:24] = 24'h00ffff;
+        row4[0+23-:24] = 24'h000000;
       end else begin
-        row4[0+23-:24] = 24'h80ff00;
+        row4[0+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -619,9 +619,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row4[24+23-:24] = 24'h00ff00;
+        row4[24+23-:24] = 24'h000000;
       end else begin
-        row4[24+23-:24] = 24'hd8d8d8;
+        row4[24+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -638,7 +638,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row4[48+23-:24] = 24'h00ff00;
       end else begin
-        row4[48+23-:24] = 24'hd8d8d8;
+        row4[48+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -655,7 +655,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row4[72+23-:24] = 24'h00ff00;
       end else begin
-        row4[72+23-:24] = 24'hd8d8d8;
+        row4[72+23-:24] = 24'h80ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -672,7 +672,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row4[96+23-:24] = 24'h00ff00;
       end else begin
-        row4[96+23-:24] = 24'hd8d8d8;
+        row4[96+23-:24] = 24'h80ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -689,7 +689,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row4[120+23-:24] = 24'h00ff00;
       end else begin
-        row4[120+23-:24] = 24'hd8d8d8;
+        row4[120+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -704,9 +704,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row4[144+23-:24] = 24'h00ffff;
+        row4[144+23-:24] = 24'h00ff00;
       end else begin
-        row4[144+23-:24] = 24'hffffff;
+        row4[144+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -721,9 +721,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row4[168+23-:24] = 24'h00ffff;
+        row4[168+23-:24] = 24'h000000;
       end else begin
-        row4[168+23-:24] = 24'hffffff;
+        row4[168+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -738,9 +738,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row5[0+23-:24] = 24'h00ffff;
+        row5[0+23-:24] = 24'h000000;
       end else begin
-        row5[0+23-:24] = 24'hd8d8d8;
+        row5[0+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -755,9 +755,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row5[24+23-:24] = 24'h00ffff;
+        row5[24+23-:24] = 24'h00ff00;
       end else begin
-        row5[24+23-:24] = 24'h00ffff;
+        row5[24+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -774,7 +774,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row5[48+23-:24] = 24'h00ff00;
       end else begin
-        row5[48+23-:24] = 24'hffffff;
+        row5[48+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -791,7 +791,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row5[72+23-:24] = 24'h00ff00;
       end else begin
-        row5[72+23-:24] = 24'h00ffff;
+        row5[72+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -808,7 +808,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row5[96+23-:24] = 24'h00ff00;
       end else begin
-        row5[96+23-:24] = 24'hd8d8d8;
+        row5[96+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -825,7 +825,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row5[120+23-:24] = 24'h00ff00;
       end else begin
-        row5[120+23-:24] = 24'h00ffff;
+        row5[120+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -840,9 +840,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row5[144+23-:24] = 24'h00ff00;
+        row5[144+23-:24] = 24'h000000;
       end else begin
-        row5[144+23-:24] = 24'h00ffff;
+        row5[144+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -857,9 +857,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row5[168+23-:24] = 24'h00ffff;
+        row5[168+23-:24] = 24'h000000;
       end else begin
-        row5[168+23-:24] = 24'h00ffff;
+        row5[168+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -874,9 +874,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row6[0+23-:24] = 24'h00ffff;
+        row6[0+23-:24] = 24'h000000;
       end else begin
-        row6[0+23-:24] = 24'hd8d8d8;
+        row6[0+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -891,9 +891,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row6[24+23-:24] = 24'h00ffff;
+        row6[24+23-:24] = 24'h00ff00;
       end else begin
-        row6[24+23-:24] = 24'h00ffff;
+        row6[24+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -908,9 +908,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row6[48+23-:24] = 24'h00ffff;
+        row6[48+23-:24] = 24'h00ff00;
       end else begin
-        row6[48+23-:24] = 24'h00ffff;
+        row6[48+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -927,7 +927,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row6[72+23-:24] = 24'h00ff00;
       end else begin
-        row6[72+23-:24] = 24'h00ffff;
+        row6[72+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -944,7 +944,7 @@ module led_output_10 (
       if (game_over == 1'h1) begin
         row6[96+23-:24] = 24'h00ff00;
       end else begin
-        row6[96+23-:24] = 24'hd8d8d8;
+        row6[96+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -959,9 +959,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row6[120+23-:24] = 24'h00ff00;
+        row6[120+23-:24] = 24'h000000;
       end else begin
-        row6[120+23-:24] = 24'h00ffff;
+        row6[120+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -976,9 +976,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row6[144+23-:24] = 24'h00ff00;
+        row6[144+23-:24] = 24'h000000;
       end else begin
-        row6[144+23-:24] = 24'h80ff00;
+        row6[144+23-:24] = 24'h000000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -993,9 +993,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row6[168+23-:24] = 24'h00ffff;
+        row6[168+23-:24] = 24'h000000;
       end else begin
-        row6[168+23-:24] = 24'h00ffff;
+        row6[168+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -1010,9 +1010,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row7[0+23-:24] = 24'h00ffff;
+        row7[0+23-:24] = 24'h000000;
       end else begin
-        row7[0+23-:24] = 24'hffffff;
+        row7[0+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -1027,9 +1027,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row7[24+23-:24] = 24'h00ffff;
+        row7[24+23-:24] = 24'h000000;
       end else begin
-        row7[24+23-:24] = 24'h00ffff;
+        row7[24+23-:24] = 24'hff0000;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -1044,9 +1044,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row7[48+23-:24] = 24'h00ffff;
+        row7[48+23-:24] = 24'h00ff00;
       end else begin
-        row7[48+23-:24] = 24'h00ffff;
+        row7[48+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -1061,9 +1061,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row7[72+23-:24] = 24'h00ffff;
+        row7[72+23-:24] = 24'h00ff00;
       end else begin
-        row7[72+23-:24] = 24'hd8d8d8;
+        row7[72+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -1078,9 +1078,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row7[96+23-:24] = 24'h00ff00;
+        row7[96+23-:24] = 24'h000000;
       end else begin
-        row7[96+23-:24] = 24'hffffff;
+        row7[96+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -1095,9 +1095,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row7[120+23-:24] = 24'h00ff00;
+        row7[120+23-:24] = 24'h000000;
       end else begin
-        row7[120+23-:24] = 24'h00ffff;
+        row7[120+23-:24] = 24'h00ff00;
       end
     end
     if (game_start == 1'h1 && game_over == 1'h0) begin
@@ -1112,9 +1112,9 @@ module led_output_10 (
       end
     end else begin
       if (game_over == 1'h1) begin
-        row7[144+23-:24] = 24'h00ffff;
+        row7[144+23-:24] = 24'h000000;
       end else begin
-        row7[144+23-:24] = 24'h00ffff;
+        row7[144+23-:24] = 24'h00ff00;
       end
     end
   end

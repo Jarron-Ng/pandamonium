@@ -141,8 +141,8 @@ module regfile_6 (
     M_reg_map_row3_d = M_reg_map_row3_q;
     M_reg_map_row2_d = M_reg_map_row2_q;
     M_reg_xpos_d = M_reg_xpos_q;
-    M_reg_map_row1_d = M_reg_map_row1_q;
     M_reg_level_d = M_reg_level_q;
+    M_reg_map_row1_d = M_reg_map_row1_q;
     M_reg_ypos_d = M_reg_ypos_q;
     M_reg_map_row7_d = M_reg_map_row7_q;
     M_reg_map_row6_d = M_reg_map_row6_q;
@@ -189,6 +189,7 @@ module regfile_6 (
       M_reg_move_num_d = 1'h0;
       M_reg_temp_d = 144'h000000000000000000000000000000000000;
       M_reg_orientation_d = 1'h0;
+      M_reg_level_d = 1'h0;
     end
     if (we == 1'h1) begin
       
@@ -403,9 +404,9 @@ module regfile_6 (
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_reg_temp_q <= 1'h0;
+      M_reg_map_row4_q <= 1'h0;
     end else begin
-      M_reg_temp_q <= M_reg_temp_d;
+      M_reg_map_row4_q <= M_reg_map_row4_d;
     end
   end
   
@@ -421,36 +422,9 @@ module regfile_6 (
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_reg_map_row3_q <= 1'h0;
+      M_reg_map_row8_q <= 1'h0;
     end else begin
-      M_reg_map_row3_q <= M_reg_map_row3_d;
-    end
-  end
-  
-  
-  always @(posedge clk) begin
-    if (rst == 1'b1) begin
-      M_reg_map_row4_q <= 1'h0;
-    end else begin
-      M_reg_map_row4_q <= M_reg_map_row4_d;
-    end
-  end
-  
-  
-  always @(posedge clk) begin
-    if (rst == 1'b1) begin
-      M_reg_ypos_q <= 1'h0;
-    end else begin
-      M_reg_ypos_q <= M_reg_ypos_d;
-    end
-  end
-  
-  
-  always @(posedge clk) begin
-    if (rst == 1'b1) begin
-      M_reg_map_row7_q <= 1'h0;
-    end else begin
-      M_reg_map_row7_q <= M_reg_map_row7_d;
+      M_reg_map_row8_q <= M_reg_map_row8_d;
     end
   end
   
@@ -466,36 +440,18 @@ module regfile_6 (
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_reg_map_row5_q <= 1'h0;
+      M_reg_temp_q <= 1'h0;
     end else begin
-      M_reg_map_row5_q <= M_reg_map_row5_d;
+      M_reg_temp_q <= M_reg_temp_d;
     end
   end
   
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_reg_level_q <= 1'h0;
+      M_reg_map_row3_q <= 1'h0;
     end else begin
-      M_reg_level_q <= M_reg_level_d;
-    end
-  end
-  
-  
-  always @(posedge clk) begin
-    if (rst == 1'b1) begin
-      M_reg_map_row8_q <= 1'h0;
-    end else begin
-      M_reg_map_row8_q <= M_reg_map_row8_d;
-    end
-  end
-  
-  
-  always @(posedge clk) begin
-    if (rst == 1'b1) begin
-      M_reg_map_row6_q <= 1'h0;
-    end else begin
-      M_reg_map_row6_q <= M_reg_map_row6_d;
+      M_reg_map_row3_q <= M_reg_map_row3_d;
     end
   end
   
@@ -511,6 +467,24 @@ module regfile_6 (
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
+      M_reg_map_row2_q <= 1'h0;
+    end else begin
+      M_reg_map_row2_q <= M_reg_map_row2_d;
+    end
+  end
+  
+  
+  always @(posedge clk) begin
+    if (rst == 1'b1) begin
+      M_reg_ypos_q <= 1'h0;
+    end else begin
+      M_reg_ypos_q <= M_reg_ypos_d;
+    end
+  end
+  
+  
+  always @(posedge clk) begin
+    if (rst == 1'b1) begin
       M_reg_orientation_q <= 1'h0;
     end else begin
       M_reg_orientation_q <= M_reg_orientation_d;
@@ -520,9 +494,36 @@ module regfile_6 (
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_reg_map_row2_q <= 1'h0;
+      M_reg_map_row7_q <= 1'h0;
     end else begin
-      M_reg_map_row2_q <= M_reg_map_row2_d;
+      M_reg_map_row7_q <= M_reg_map_row7_d;
+    end
+  end
+  
+  
+  always @(posedge clk) begin
+    if (rst == 1'b1) begin
+      M_reg_level_q <= 1'h0;
+    end else begin
+      M_reg_level_q <= M_reg_level_d;
+    end
+  end
+  
+  
+  always @(posedge clk) begin
+    if (rst == 1'b1) begin
+      M_reg_map_row5_q <= 1'h0;
+    end else begin
+      M_reg_map_row5_q <= M_reg_map_row5_d;
+    end
+  end
+  
+  
+  always @(posedge clk) begin
+    if (rst == 1'b1) begin
+      M_reg_map_row6_q <= 1'h0;
+    end else begin
+      M_reg_map_row6_q <= M_reg_map_row6_d;
     end
   end
   
